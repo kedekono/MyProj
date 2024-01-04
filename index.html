@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-cn">
 <head>
     <meta charset="utf-8">
@@ -17,7 +17,56 @@
         <section class="h2">
             <h2>Please select the data you want for your forecast below：</h2>
         </section>
-        <section class="in">
+
+
+        <section class="in1">
+            <div class="failures">
+                <p>Failures:</p>
+                <select id="failures" title="选择你过去失败的次数,4次或4次以上都按4算。">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="Medu">
+                <p>Medu:</p>
+                <select id="Medu" title="选择你母亲的受教育程度。">
+                    <option value="0">无</option>
+                    <option value="1">小学教育四年级</option>
+                    <option value="2">五至九年级</option>
+                    <option value="3">中等教育</option>
+                    <option value="4">高等教育</option>
+                </select>
+            </div>
+            <div class="Mjob">
+                <p>Mjob:</p>
+                <select id="Mjob" title="选择你母亲的工作。">
+                    <option value="0">health</option>
+                    <option value="1">services</option>
+                    <option value="2">teacher</option>
+                    <option value="3">at_home</option>
+                    <option value="4">other</option>
+                </select>
+            </div>
+            <div class="schoolsup">
+                <p>Schoolsup:</p>
+                <select id="schoolsup" title="是否受到学校的教育支持。">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="Fedu">
+                <p>Fedu:</p>
+                <select id="Fedu" title="选择你父亲的受教育程度。">
+                    <option value="0">无</option>
+                    <option value="1">小学教育四年级</option>
+                    <option value="2">五至九年级</option>
+                    <option value="3">中等教育</option>
+                    <option value="4">高等教育</option>
+                </select>
+            </div>
             <div class="age">
                 <p>Age:</p>
                 <select id="age" title="选择你的年龄">
@@ -31,66 +80,90 @@
                     <option value="22">22</option>
                 </select>
             </div>
-            <div class="Medu">
-                <p>Medu:</p>
-                <select id="Medu" title="选择你母亲的受教育程度。0代表无、1代表小学教育四年级、2代表五至九年级、3代表中等教育、4代表高等教育">
-                    <option value="0">0  无</option>
-                    <option value="1">1  小学教育四年级</option>
-                    <option value="2">2  五至九年级</option>
-                    <option value="3">3  中等教育</option>
-                    <option value="4">4  高等教育</option>
+            <div class="Walc">
+                <p>Walc:</p>
+                <select id="Walc" title="周末饮酒量。">
+                    <option value="1">非常低</option>
+                    <option value="2">较低</option>
+                    <option value="3">中等</option>
+                    <option value="4">较高</option>
+                    <option value="5">非常高</option>
                 </select>
             </div>
-            <div class="Fedu">
-                <p>Fedu:</p>
-                <select id="Fedu" title="选择你父亲的受教育程度。0代表无、1代表小学教育四年级、2代表五至九年级、3代表中等教育、4代表高等教育">
-                    <option value="0">0  无</option>
-                    <option value="1">1  小学教育四年级</option>
-                    <option value="2">2  五至九年级</option>
-                    <option value="3">3  中等教育</option>
-                    <option value="4">4  高等教育</option>
+            <div class="higher">
+                <p>Higher:</p>
+                <select id="higher" title="是否有升学意愿。">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
                 </select>
             </div>
-            <div class="Mjob">
-                <p>Mjob:</p>
-                <select id="Mjob" title="选择你母亲的工作。0代表health、1代表services、2代表teacher、3代表at_home、4代表other">
-                    <option value="0">0  health</option>
-                    <option value="1">1  services</option>
-                    <option value="2">2  teacher</option>
-                    <option value="3">3  at_home</option>
-                    <option value="4">4  other</option>
+        </section>
+
+
+        <section class="in2">
+            <div class="goout">
+                <p>Goout:</p>
+                <select id="goout" title="你每周和朋友外出的程度。">
+                    <option value="1">非常低</option>
+                    <option value="2">较低</option>
+                    <option value="3">中等</option>
+                    <option value="4">较高</option>
+                    <option value="5">非常高</option>
+                </select>
+            </div>
+            <div class="absences">
+                <p>Absences:</p>
+                <input type="text" id="absences" title="缺席次数。">
+            </div>
+            <div class="address">
+                <p>Address:</p>
+                <select id="address" title="居住地是城镇Urban还是乡村Rural。">
+                    <option value="0">Urban</option>
+                    <option value="1">Rural</option>
                 </select>
             </div>
             <div class="studytime">
                 <p>Studytime:</p>
-                <select id="studytime" title="选择你的每周学习时间。1代表学习时间小于2小时、2代表学习时间为2至5小时、3代表学习时间为5至10小时、4代表学习时间超过10小时">
-                    <option value="1">1  小于二小时</option>
-                    <option value="2">2  二至五小时</option>
-                    <option value="3">3  五至十小时</option>
-                    <option value="4">4  超过十小时</option>
+                <select id="studytime" title="选择你每周的学习时间。">
+                    <option value="1">小于二小时</option>
+                    <option value="2">二至五小时</option>
+                    <option value="3">五至十小时</option>
+                    <option value="4">超过十小时</option>
                 </select>
             </div>
-            <div class="failures">
-                <p>Failures:</p>
-                <select id="failures" title="选择你过去失败的次数。4次或4次以上都按4算">
-                    <option value="0">0次</option>
-                    <option value="1">1次</option>
-                    <option value="2">2次</option>
-                    <option value="3">3次</option>
-                    <option value="4">4次</option>
+            <div class="Dalc">
+                <p>Dalc:</p>
+                <select id="Dalc" title="工作日饮酒量。">
+                    <option value="1">非常低</option>
+                    <option value="2">较低</option>
+                    <option value="3">中等</option>
+                    <option value="4">较高</option>
+                    <option value="5">非常高</option>
                 </select>
             </div>
-            <div class="goout">
-                <p>Goout:</p>
-                <select id="goout" title="选择你每周和朋友外出的程度数。1表示非常低，5表示非常高">
-                    <option value="1">1  非常低</option>
-                    <option value="2">2  较低</option>
-                    <option value="3">3  中等</option>
-                    <option value="4">4  较高</option>
-                    <option value="5">5  非常高</option>
+            <div class="internet">
+                <p>Internet:</p>
+                <select id="internet" title="在家是否上网。">
+                    <option value="0">no</option>
+                    <option value="1">yes</option>
+                </select>
+            </div>
+            <div class="sex">
+                <p>Sex:</p>
+                <select id="sex" title="性别。">
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+            </div>
+            <div class="school">
+                <p>School:</p>
+                <select id="school" title="学校名称代号。">
+                    <option value="0">GP</option>
+                    <option value="1">MS</option>
                 </select>
             </div>
         </section>
+
         <section class="out">
             <div><button type="button" onclick="predict()">predict</button></div>
             <div><p id="output"></p> </div>
@@ -98,7 +171,7 @@
     </main>
 
     <footer>
-    <p>注：项目仅供实践和测试!!!</p>
+        <p>注：项目仅供实践和测试!!!</p>
     </footer>
 
 </body>

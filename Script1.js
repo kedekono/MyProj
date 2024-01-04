@@ -18,12 +18,12 @@ function predict() {
     var school = $("#school").val();
 
     if (Absences < 0 || Absences > 93) {
-        alert("ÇëÊäÈë·¶Î§ÄÚµÄÈ±ÇÚ´ÎÊý£¬³¬¹ý93´Î°´93´ÎËã¡£");
+        alert("è¯·è¾“å…¥èŒƒå›´å†…çš„ç¼ºå‹¤æ¬¡æ•°ï¼Œè¶…è¿‡93æ¬¡æŒ‰93æ¬¡ç®—ã€‚");
         return false;
     }
 
     $.ajax({
-        url: "http://192.168.0.212:5000/Predict",
+        url: "http://127.0.0.1:5000/Predict",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({

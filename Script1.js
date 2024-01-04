@@ -17,7 +17,7 @@ function predict() {
     var sex = $("#sex").val();
     var school = $("#school").val();
 
-    if (Absences < 0 || Absences > 93) {
+    if (absences < 0 || absences > 93) {
         alert("请输入范围内的缺勤次数，超过93次按93次算。");
         return false;
     }

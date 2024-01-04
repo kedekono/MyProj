@@ -9,7 +9,7 @@ function predict() {
     var goout = $("#goout").val();
 
     $.ajax({
-        url: "http://192.168.43.200:5000/Predict",
+        url: "http://192.168.0.212:5000/Predict",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({

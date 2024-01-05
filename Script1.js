@@ -36,7 +36,10 @@ function predict() {
         alert("请输入范围内的缺勤次数，超过93次按93次算。");
         return false;
     }
-
+    
+    // 显示等待提示框
+    $("#output").text("Loading...");
+    
     $.ajax({
         url: "https://wasp-helping-man.ngrok-free.app/Predict",
         type: "POST",

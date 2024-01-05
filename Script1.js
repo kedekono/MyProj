@@ -38,7 +38,7 @@ function predict() {
     }
 
     $.ajax({
-        url: "http://192.168.230.126:5000/Predict",
+        url: "https://wasp-helping-man.ngrok-free.app/Predict",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({

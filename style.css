@@ -15,7 +15,7 @@ main {
 }
 footer {
     position: relative;
-    padding: 150px 5px;
+    padding: 100px 5px;
     z-index: 1;
 }
 
@@ -42,12 +42,12 @@ footer {
     }
 
 .h1 {
-    color: snow;
+    color: black;
     text-align: center;
 }
 
 .h2 {
-    color: snow;
+    color: black;
     padding: 5px 0px 10px 5px;
 }
 

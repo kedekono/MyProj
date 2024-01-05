@@ -17,28 +17,28 @@ function predict() {
     var sex = $("#sex").val();
     var school = $("#school").val();
 
-    // ¼ì²éÊäÈëÊÇ·ñÎª¿Õ
+    // æ£€æŸ¥è¾“å…¥æ˜¯å¦ä¸ºç©º
     if (absences === "") {
-        alert("ÇëÊäÈëÈ±Ï¯´ÎÊı");
-        return false; // ×èÖ¹¼ÌĞø²Ù×÷Ò³Ãæ
+        alert("è¯·è¾“å…¥ç¼ºå¸­æ¬¡æ•°");
+        return false; // é˜»æ­¢ç»§ç»­æ“ä½œé¡µé¢
     }
 
-    // Ê¹ÓÃÕıÔò±í´ïÊ½ÑéÖ¤ÊäÈëÊÇ·ñÎªÕûÊı
+    // ä½¿ç”¨æ­£åˆ™è¡¨è¾¾å¼éªŒè¯è¾“å…¥æ˜¯å¦ä¸ºæ•´æ•°
     var isInteger = /^\d+$/.test(absences);
 
     if (!isInteger) {
-        alert("ÇëÊäÈëÒ»¸öÕûÊı");
-        return false; // ×èÖ¹¼ÌĞø²Ù×÷Ò³Ãæ
+        alert("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°");
+        return false; // é˜»æ­¢ç»§ç»­æ“ä½œé¡µé¢
     }
 
-    // ÑéÖ¤·¶Î§
+    // éªŒè¯èŒƒå›´
     if (absences < 0 || absences > 93) {
-        alert("ÇëÊäÈë·¶Î§ÄÚµÄÈ±ÇÚ´ÎÊı£¬³¬¹ı93´Î°´93´ÎËã¡£");
+        alert("è¯·è¾“å…¥èŒƒå›´å†…çš„ç¼ºå‹¤æ¬¡æ•°ï¼Œè¶…è¿‡93æ¬¡æŒ‰93æ¬¡ç®—ã€‚");
         return false;
     }
 
     $.ajax({
-        url: "http://127.0.0.1:5000/Predict",
+        url: "http://192.168.0.212:5000/Predict",
         type: "POST",
         contentType: "application/json",
         data: JSON.stringify({
